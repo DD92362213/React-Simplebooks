@@ -1,1 +1,1 @@
-export const SEARCH_FOCUS='home/search_focus';
+export const HOME_CHANGE='change_home';
