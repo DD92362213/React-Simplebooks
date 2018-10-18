@@ -6,7 +6,6 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Home from './routes/home'
 import Detail from './routes/detail'
-
 class App extends Component {
   render() {
     return (

@@ -119,3 +119,62 @@ export const RecommendImgBox = styled.div`
         color: #999;
     }
 `;
+export const WriterMain = styled.div`
+    box-sizing: border-box;
+    overflow:hidden;
+    width:280px;
+`;
+export const WriterItem = styled.div`
+    margin-top: 15px;
+    overflow:hidden;
+    box-sizing: border-box;
+    width:280px;
+    height:48px;
+    line-height: 20px;
+   .pic{
+    float:left;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+   }
+   .title{
+    
+    height:23px;
+    font-size: 14px;
+    display: block;
+   }
+   .msg{
+    margin-left:20px;
+    height:23px;
+    font-size: 12px;
+    color: #969696;
+   }
+`;
+export const WriterBottom = styled.button`
+    
+    padding: 7px 7px 7px 12px;
+    margin-top:8px;
+    width: 280px;
+    font-size: 13px;
+    color: #787878;
+    background-color: #f7f7f7;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    text-align: center;
+`;
+export const WriterText = styled.div`
+    width:280px;
+    margin-bottom:30px;
+    .left{
+        float:left;
+        font-size: 14px;
+        color: #969696;
+    }
+    .right{
+        float:right;
+        font-size: 14px;
+        color: #969696;
+    }
+    
+`;
