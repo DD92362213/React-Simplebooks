@@ -7,9 +7,6 @@ const changehome=(result)=>({
     titleList:result.titleList,
     writerList:result.writerList
 })
-
-
-
 export const getHomInfo = ()=>{
     return(dispatch)=>{
         axios.get('/api/home.json').then((res)=>{
