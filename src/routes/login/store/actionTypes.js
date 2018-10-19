@@ -1,0 +1,1 @@
+export const IS_LOGIN = 'login/is_login'

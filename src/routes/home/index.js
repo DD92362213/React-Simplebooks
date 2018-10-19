@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{PureComponent} from 'react';
 import Topic from './components/Topic'
 import Writer from './components/Writer'
 import List from './components/List'
@@ -13,7 +13,7 @@ import {
     HomeImg
 } from './style'
 
-class Home extends Component{
+class Home extends PureComponent{
     render(){
         return(
             <HomeWrapper>

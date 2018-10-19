@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Header from './common/header'
 import store from './store'
 import { Provider } from 'react-redux'
@@ -6,20 +6,20 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Home from './routes/home'
 import Detail from './routes/detail'
-class App extends Component {
+import Login from './routes/login'
+class App extends PureComponent {
   render() {
     return (
       <div>
-        <Provider store={store}>
-          <div>
-            <Header />
+        <Provider store={store}>   
             <BrowserRouter>
               <div>
+                <Header />
                 <Route path='/' exact component={Home} ></Route>
-                <Route path='/detail' exact component={Detail} ></Route>
+                <Route path='/detail/:id' exact component={Detail} ></Route>
+                <Route path='/login' exact component={Login} ></Route>
               </div>
             </BrowserRouter>
-          </div>
         </Provider>
         <GlobalStyle />
       </div>

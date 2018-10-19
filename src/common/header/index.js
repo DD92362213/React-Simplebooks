@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux'
 import { CSSTransition } from 'react-transition-group'
 import { actionCreators } from './store'
+import{Link} from 'react-router-dom'
 import {
   HeaderWrapper,
   Logo,
@@ -17,7 +18,7 @@ import {
   SearchInfoItem
 } from './style'
 
-class Header extends Component {
+class Header extends PureComponent {
   getListitem(){
     const { isfocus, list , page,totalpage,ismousin,handleMouseEnter,handleMouseLeave,handleClick } = this.props;
     const pagelist=[];
@@ -47,10 +48,10 @@ class Header extends Component {
     }
   }
   render() {
-    const { isfocus, handleInputBlur, handleInputFocus,list } = this.props;
+    const { isfocus, handleInputBlur, handleInputFocus,list,islogin } = this.props;
     return (
       <div>
-        <HeaderWrapper><Logo />
+        <HeaderWrapper><Link to="/"><Logo /></Link>
           <Nav>
             <NavItem className='left act'>首页</NavItem>
             <NavItem className='left'>下载App</NavItem>
@@ -69,7 +70,7 @@ class Header extends Component {
               <i className={isfocus ? 'focus iconfont zoom' : 'iconfont zoom'}>&#xe623;</i>
               {this.getListitem()}
             </NavSearchWrapper>
-            <NavItem className='right'>登录</NavItem>
+            {islogin?<NavItem className='right'>退出</NavItem>:<Link to="/login"><NavItem className='right'>登录</NavItem></Link>}
             <NavItem className='right'><i className="iconfont">&#xe636;</i></NavItem>
           </Nav>
           <Addition>
@@ -90,7 +91,8 @@ const mapStateToProps = (state) => {
     list: state.header.get('list'),
     page:state.header.get('page'),
     totalpage:state.header.get('totalpage'),
-    ismousin:state.header.get('ismousin')
+    ismousin:state.header.get('ismousin'),
+    islogin:state.login.get('islogin')
   }
 }
 const mapDispathToProps = (dispatch) => {
