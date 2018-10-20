@@ -5,8 +5,8 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Home from './routes/home'
-import Detail from './routes/detail'
-import Login from './routes/login'
+import Detail from './routes/detail/loadable'
+import Login from './routes/login/loadable'
 class App extends PureComponent {
   render() {
     return (

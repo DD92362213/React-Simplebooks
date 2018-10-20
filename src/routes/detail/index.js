@@ -1,6 +1,7 @@
 import React,{ PureComponent } from 'react';
 import { connect } from 'react-redux';
 import {getDital} from './store/actionCreators'
+import {withRouter} from 'react-router-dom' 
 import {
     DetailWrapper,
     DetailTitle,
@@ -30,4 +31,4 @@ const mapDispatch=(dispatch)=>({
         dispatch(getDital(id))
     }
 })
-export default connect(mapState,mapDispatch)(Detail);
+export default connect(mapState,mapDispatch)(withRouter(Detail));
