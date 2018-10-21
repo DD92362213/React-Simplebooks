@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import LogoPic from '../../statics/logo.png'
 
 export const HeaderWrapper = styled.div`
-    z-inde:1;
+    z-index:1;
     position: relative;
     height:58px;
     border-bottom:1px solid #f0f0f0;
